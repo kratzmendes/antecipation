@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Layout } from './components/Layout';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <p>
          Hello World from Antecipation App
         </p>
+        <Layout/>
         <a
           className="App-link"
           href="https://reactjs.org"
