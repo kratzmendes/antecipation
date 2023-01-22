@@ -18,6 +18,7 @@ interface Props{
     borderWidth?: string;
     textAlign?: string;
     fontSize?: string;
+    fontWeight?: string;
     color?: string;
 }
 
@@ -48,9 +49,13 @@ export const Container = styled.div<Props>`
     font-size: ${({ fontSize }) => fontSize ? fontSize : 'calc(10px + 2vmin)'};
     color: ${({ color }) => color ? color : '#656565'};
 `
-export const Flex = styled.div`
-    display: flex;
-    flex-direction: column;
+export const Flex = styled.div<Props>`
+    display: ${({ display }) => display ? display : 'flex'};
+    flex-direction: ${({ flexDirection }) => flexDirection ? flexDirection : 'column'};
+    align-items: ${({ alignItems }) => alignItems ? alignItems : 'center'};
+    justify-content: ${({ justifyContent }) => justifyContent ? justifyContent : 'center'};
+    margin: 0px;
+    padding: 0px;
     @media(min-width: 768px){
         flex-direction: row;
   }
@@ -68,8 +73,7 @@ export const Input = styled.input`
     border-width: 1px;
     &:focus {
         outline: none;
-        border-color: #66AFE9;
-        
+        border-color: #66AFE9;       
     }
 
 `
@@ -92,9 +96,20 @@ export const HelperText = styled.label`
 `
 export const TitleH5 = styled.h5`
     margin-bottom: 22px;
-    margin-left: 29px;
-    width: 114%;
+    margin-left: 40px;
+    width: 118%;
     font: SourceSansPro;
+    text-align: left;
+`
+export const ResultP = styled.p<Props>`
+    margin: 22px 0px 5px 4px;
+
+    font: SourceSansPro;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: ${({ fontWeight }) => fontWeight ? fontWeight : 'bold'};
+    color: #5D9CEC;
+
     text-align: left;
 `
 
