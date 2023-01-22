@@ -1,10 +1,12 @@
 import React from 'react'
-import { Container, Flex } from "./styles";
+import { Container, Flex } from "../../styles/styles";
 
 interface Props{
     className?: string;
     children?: React.ReactNode;
 
+///////////////////////////////////////////////////    
+//APAGAR O QUE NAO FOR UTILIZADO
     fontSize?: any;
     color?: string;
     display?: string;
@@ -12,14 +14,15 @@ interface Props{
     alignItems?: string;
     maxWidth?: string;
     margin?: string;
+///////////////////////////////////////////////////
+
 }
 
-export const Layout: React.FC <Props> = ({className, children}) => {
+export const SimulationContainer: React.FC <Props> = ({className, children}) => {
 
     return (
         <Container className={className}>
             <Flex>
-                Hello Layout Component!
                 {children}
             </Flex>
         </Container>

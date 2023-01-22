@@ -1,12 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Layout } from './components/Layout';
+import { FormSimulationColumn } from './components/FormSimulationColumn';
+import { ResultsSimulationColumn } from './components/ResultsSimulationColumn';
+import { SimulationContainer } from './components/SimulationContainer';
 
 function App() {
   return (
     <div className="App">
-      <Layout/>
+      <SimulationContainer>
+        <FormSimulationColumn/>
+        <ResultsSimulationColumn/>
+      </SimulationContainer>
     </div>
   );
 }
